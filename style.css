@@ -1,0 +1,133 @@
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======
+Typography
+====== */
+
+h1 {
+  font-size: 2.25rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.3125rem;
+  color: #404040;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.info-small {
+  font-size: 0.625rem;
+}
+
+.gradient {
+  top: 0;
+  border-top: 5px solid orange;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.bg-join-us,
+.register-today,
+.gradient-text {
+  color: #f18119;
+  text-transform: uppercase;
+}
+
+@media (min-width: 650px) {
+  body {
+    font-size: 1.125rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ======
+Layout
+====== */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bg-image-container {
+  background-image: url(images/dark-ribs.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.register-container {
+  padding: 3em;
+}
+
+@media (min-width: 650px) {
+  .main-container {
+    flex-direction: row;
+  }
+  .bg-image-container,
+  .register-container {
+    height: 100vh;
+  }
+  .bg-image-container {
+    width: 55%;
+  }
+  .register-container {
+    width: 45%;
+  }
+}
+
+/* ======
+Buttons
+====== */
+
+.register-btn {
+  background: linear-gradient(to right, #ffa51d, #ff713b);
+}
+
+.register-btn:hover,
+.register-btn:focus {
+  color: #000;
+  background: linear-gradient(to left, #ffa51d, #ff713b);
+  font-weight: 900;
+}
+
+.btn {
+  cursor: pointer;
+  font-family: 'Source Sans 3', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  min-width: 206px;
+  color: #fff;
+}
+
+input,
+.btn {
+  border-radius: 5px;
+  margin: 0.5em 0;
+  padding: 0.5em 1.25em;
+}
+
+input {
+  text-align: center;
+  border: 1px solid rgba(64, 65, 64, 0.6);
+}
