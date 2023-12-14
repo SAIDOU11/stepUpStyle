@@ -1,9 +1,9 @@
 body {
-  font-family: 'Source Sans 3', sans-serif;
-  line-height: 1.5;
-  font-size: 1rem;
   margin: 0;
-  padding: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  text-align: center;
 }
 
 /* ======
@@ -13,12 +13,28 @@ Typography
 h1 {
   font-size: 2.25rem;
   color: #fff;
-  font-weight: 400;
+  font-weight: 300;
+}
+
+h1 + p,
+h2 + p {
+  text-transform: uppercase;
+  color: #f18119;
+}
+
+h1 + p {
+  font-weight: 900;
+  font-size: 1.3125rem;
 }
 
 h2 {
   font-size: 1.3125rem;
   color: #404040;
+}
+
+h2 + p {
+  font-weight: 900;
+  font-size: 1rem;
 }
 
 strong {
@@ -27,18 +43,15 @@ strong {
 
 .info-small {
   font-size: 0.625rem;
+  letter-spacing: 1px;
 }
 
-.gradient {
-  top: 0;
-  border-top: 5px solid orange;
-  width: 40%;
-  margin: 0 auto;
+.top-text {
+  font-size: 0.625rem;
+  font-weight: 900;
 }
 
-.bg-join-us,
-.register-today,
-.gradient-text {
+.top-text {
   color: #f18119;
   text-transform: uppercase;
 }
@@ -56,27 +69,32 @@ strong {
 }
 
 /* ======
-Layout
+Intro section
 ====== */
 
-.main-container {
+/* .page-container {
   display: flex;
   flex-direction: column;
-  text-align: center;
-}
+} */
 
-.bg-image-container {
-  background-image: url(images/dark-ribs.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  height: 500px;
+.intro {
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  background-color: #404040;
+  background-image: url(../images/dark-ribs.jpg);
+  padding: 0 1.25em 1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  /* height: 500px; */
 }
 
-.register-container {
+.top-text {
+  order: -2;
+}
+
+.main-container {
   padding: 3em;
 }
 
@@ -84,14 +102,14 @@ Layout
   .main-container {
     flex-direction: row;
   }
-  .bg-image-container,
-  .register-container {
+  .intro,
+  .main-container {
     height: 100vh;
   }
-  .bg-image-container {
+  .intro {
     width: 55%;
   }
-  .register-container {
+  .main-container {
     width: 45%;
   }
 }
@@ -100,12 +118,12 @@ Layout
 Buttons
 ====== */
 
-.register-btn {
+.main-btn {
   background: linear-gradient(to right, #ffa51d, #ff713b);
 }
 
-.register-btn:hover,
-.register-btn:focus {
+.main-btn:hover,
+.main-btn:focus {
   color: #000;
   background: linear-gradient(to left, #ffa51d, #ff713b);
   font-weight: 900;
