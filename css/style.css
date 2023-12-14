@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Source Sans 3', sans-serif;
@@ -14,27 +18,36 @@ h1 {
   font-size: 2.25rem;
   color: #fff;
   font-weight: 300;
-}
-
-h1 + p,
-h2 + p {
-  text-transform: uppercase;
-  color: #f18119;
+  margin: 0;
 }
 
 h1 + p {
   font-weight: 900;
   font-size: 1.3125rem;
+  text-transform: uppercase;
+  color: #f18119;
 }
 
 h2 {
   font-size: 1.3125rem;
   color: #404040;
+  margin: 0;
 }
 
 h2 + p {
   font-weight: 900;
   font-size: 1rem;
+  text-transform: uppercase;
+  color: #f18119;
+  margin-top: 0;
+}
+
+.top-text {
+  color: #f18119;
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  order: -1;
 }
 
 strong {
@@ -46,36 +59,18 @@ strong {
   letter-spacing: 1px;
 }
 
-.top-text {
-  font-size: 0.625rem;
-  font-weight: 900;
-}
+/* ======
+page container
+====== */
 
-.top-text {
-  color: #f18119;
-  text-transform: uppercase;
-}
-
-@media (min-width: 650px) {
-  body {
-    font-size: 1.125rem;
-  }
-  h1 {
-    font-size: 3.5rem;
-  }
-  h2 {
-    font-size: 1.75rem;
-  }
+.page-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ======
 Intro section
 ====== */
-
-/* .page-container {
-  display: flex;
-  flex-direction: column;
-} */
 
 .intro {
   display: flex;
@@ -83,35 +78,19 @@ Intro section
   align-content: space-between;
   background-color: #404040;
   background-image: url(../images/dark-ribs.jpg);
-  padding: 0 1.25em 1em;
+  padding: 0 0.5em 2em;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: center;
   /* height: 500px; */
 }
 
-.top-text {
-  order: -2;
-}
+/* ======
+main-container section
+====== */
 
 .main-container {
-  padding: 3em;
-}
-
-@media (min-width: 650px) {
-  .main-container {
-    flex-direction: row;
-  }
-  .intro,
-  .main-container {
-    height: 100vh;
-  }
-  .intro {
-    width: 55%;
-  }
-  .main-container {
-    width: 45%;
-  }
+  padding: 2em 1.5em;
 }
 
 /* ======
@@ -148,4 +127,30 @@ input,
 input {
   text-align: center;
   border: 1px solid rgba(64, 65, 64, 0.6);
+}
+
+/* ======
+media queries
+====== */
+
+@media (min-width: 530px) {
+  body {
+    font-size: 1.125rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+  /*  */
+  .page-container {
+    flex-direction: row;
+  }
+  .intro,
+  .main-container {
+    width: 50%;
+    min-height: 100vh;
+  }
 }
