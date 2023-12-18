@@ -73,16 +73,12 @@ Intro section
 ====== */
 
 .intro {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
   background-color: #404040;
   background-image: url(../images/dark-ribs.jpg);
   padding: 0 0.5em 2em;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* height: 500px; */
 }
 
 /* ======
@@ -93,19 +89,42 @@ main-container section
   padding: 2em 1.5em;
 }
 
-/* ======
-Buttons
-====== */
-
-.main-btn {
-  background: linear-gradient(to right, #ffa51d, #ff713b);
+.container {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.main-btn:hover,
-.main-btn:focus {
-  color: #000;
-  background: linear-gradient(to left, #ffa51d, #ff713b);
-  font-weight: 900;
+.container-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+/* ======
+Form
+====== */
+
+.email-collector {
+  border: 3px #ff713b solid;
+  width: 80%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input,
+.btn {
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+input {
+  font-family: inherit;
+  text-align: inherit;
+  margin-bottom: 0.75em;
+  border: 1px solid #404040;
 }
 
 .btn {
@@ -117,16 +136,15 @@ Buttons
   color: #fff;
 }
 
-input,
-.btn {
-  border-radius: 5px;
-  margin: 0.5em 0;
-  padding: 0.5em 1.25em;
+.main-btn {
+  background: linear-gradient(to right, #ffa51d, #ff713b);
 }
 
-input {
-  text-align: center;
-  border: 1px solid rgba(64, 65, 64, 0.6);
+.main-btn:hover,
+.main-btn:focus {
+  color: #000;
+  background: linear-gradient(to left, #ffa51d, #ff713b);
+  font-weight: 900;
 }
 
 /* ======
@@ -152,5 +170,13 @@ media queries
   .main-container {
     width: 50%;
     min-height: 100vh;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-intro {
+    height: 100%;
   }
 }
