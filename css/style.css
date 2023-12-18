@@ -26,6 +26,7 @@ h1 + p {
   font-size: 1.3125rem;
   text-transform: uppercase;
   color: #f18119;
+  margin: 0;
 }
 
 h2 {
@@ -44,10 +45,14 @@ h2 + p {
 
 .top-text {
   color: #f18119;
+  margin: 0;
+  padding-top: 0.125em;
   font-size: 0.625rem;
   font-weight: 900;
   text-transform: uppercase;
   order: -1;
+  border-top: 5px solid #f18119;
+  border-image: linear-gradient(to left, #ff713b, #ffa51b) 1;
 }
 
 strong {
@@ -74,7 +79,8 @@ Intro section
 
 .intro {
   background-color: #404040;
-  background-image: url(../images/dark-ribs.jpg);
+  background-image: url(../images/ribs.jpg);
+  background-blend-mode: screen;
   padding: 0 0.5em 2em;
   background-size: cover;
   background-repeat: no-repeat;
@@ -106,7 +112,6 @@ Form
 ====== */
 
 .email-collector {
-  border: 3px #ff713b solid;
   width: 80%;
   max-width: 300px;
   margin-left: auto;
@@ -117,7 +122,6 @@ input,
 .btn {
   width: 100%;
   border-radius: 5px;
-  padding: 0.5em;
 }
 
 input {
@@ -125,26 +129,38 @@ input {
   text-align: inherit;
   margin-bottom: 0.75em;
   border: 1px solid #404040;
+  padding: 0.5em;
+  transform: scale(1);
+  transition: transform 250ms;
+}
+
+input:focus {
+  transform: scale(1.1);
 }
 
 .btn {
+  display: inline-block;
   cursor: pointer;
+  padding: 1em 1.5em;
   font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.625rem;
+  font-weight: 900;
+  letter-spacing: 1px;
   text-transform: uppercase;
   border: none;
-  min-width: 206px;
-  color: #fff;
 }
 
 .main-btn {
   background: linear-gradient(to right, #ffa51d, #ff713b);
+  color: #fff;
+  transform: scale(1); /* 100% */
+  transition: transform 250ms;
 }
 
 .main-btn:hover,
 .main-btn:focus {
   color: #000;
-  background: linear-gradient(to left, #ffa51d, #ff713b);
-  font-weight: 900;
+  transform: scale(1.1);
 }
 
 /* ======
